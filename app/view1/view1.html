@@ -1,0 +1,12 @@
+<h1>ALL THE INFO, 1 CLICK AWAY</h1>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-4" ng-repeat="article in articles">
+			<h3><a ng-href="index.html#/view2/{{article.id}}">{{ article.title }}</a></h3>
+			<p ng-if="article.img !== ''">
+				<img src="{{ article.img }}" class="img-responsive">
+			</p>
+			<p><a ng-href="index.html#/view2/{{article.id}}">READ MORE</a></p>
+		</div>
+	</div>
+</div>
