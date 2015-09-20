@@ -5,7 +5,7 @@
 			<p ng-if="article.img !== ''">
 				<img ng-src="{{ article.img }}" class="img-responsive">
 			</p>
-			<p><a ng-href="index.html#/view2/{{article.id}}">READ MORE</a></p>
+			<p><a ng-href="index.html#/view2/{{article.id}}" ng-click="increaseCount(article.id)>READ MORE</a></p>
 		</div>
 	</div>
 </div>
