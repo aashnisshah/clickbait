@@ -12,3 +12,15 @@ h1 {
 a {
 	color: #00A0B0;
 }
+
+h1 a {
+	color: #CC333F;
+}
+
+h1 a:hover {
+	text-decoration: none;
+}
+
+.header {
+	text-align: center;
+}

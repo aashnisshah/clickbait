@@ -10,7 +10,7 @@ angular.module('myApp.view1', ['ngRoute'])
 
 }])
 
-.controller('View1Ctrl', function($scope) {
+.controller('View1Ctrl', function($scope, $firebaseObject) {
   $scope.articles = [
   	{
   		'id': 0,
@@ -31,4 +31,11 @@ angular.module('myApp.view1', ['ngRoute'])
   		'content': 'Curabitur tortor augue, suscipit nec nunc vel, pharetra congue ligula. Sed at porttitor ex. Nulla facilisi. Nam blandit lectus sed orci egestas accumsan. Aliquam scelerisque posuere ante, eget accumsan est sagittis sit amet. In tellus nunc, vehicula a imperdiet quis, semper a justo. Cras massa justo, tincidunt et ornare sit amet, volutpat ac arcu. Vestibulum pulvinar placerat magna, eget semper lectus cursus id. Suspendisse interdum rutrum augue a vehicula. Donec pharetra a ligula quis feugiat. Vestibulum a sapien accumsan risus pharetra semper. Vestibulum tellus sem, mattis sit amet sapien sed, blandit semper justo. Maecenas neque tortor, venenatis non nibh vitae, molestie egestas augue. Donec mattis lacus sit amet massa feugiat, maximus dictum tortor fermentum. Aenean vehicula nec nisi non ullamcorper.'
   	}
   ];
+
+  var ref = new Firebase("https://boiling-fire-8955.firebaseio.com");
+  // download the data into a local object
+  var syncObject = $firebaseObject(ref);
+  // synchronize the object with a three-way data binding
+  // click on `index.html` above to see it used in the DOM!
+  syncObject.$bindTo($scope, "data");
 });
