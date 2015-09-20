@@ -11,11 +11,10 @@
 		<div class="col-sm-3 col-sm-offset-1 blog-sidebar">
 			<div class="sidebar-module sidebar-module-inset">
 				<div class="" ng-repeat="article in articles | limitTo:5">
-					<h4><a ng-href="index.html#/view2/{{article.id}}">{{ article.title }}</a></h4>
+					<h4><a ng-href="index.html#/view2/{{article.id}}" ng-click="increaseCount(article.id)">{{ article.title }}</a></h4>
 					<p ng-if="article.img !== ''">
 						<img src="{{ article.img }}" class="img-responsive">
 					</p>
-					<p><a ng-href="index.html#/view2/{{article.id}}">READ MORE</a></p>
 				</div>
 			</div>
 		</div>

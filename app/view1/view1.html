@@ -1,7 +1,7 @@
 <div class="container">
 	<div class="row">
 		<div class="col-sm-4" ng-repeat="article in articles">
-			<h3><a ng-href="index.html#/view2/{{article.id}}">{{ article.title }}</a></h3>
+			<h3><a ng-href="index.html#/view2/{{article.id}}" ng-click="increaseCount(article.id)">{{ article.title }}</a></h3>
 			<p ng-if="article.img !== ''">
 				<img ng-src="{{ article.img }}" class="img-responsive">
 			</p>
