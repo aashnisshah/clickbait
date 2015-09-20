@@ -11,7 +11,7 @@ angular.module('myApp.view1', ['ngRoute'])
 }])
 
 .controller('View1Ctrl', function($scope, $firebaseObject, $http) {
-  var url = 'http://congen.co/clickbait/test.json?callback=JSON_CALLBACK';
+  var url = 'http://congen.co/clickbait/test.json';
   $http.get(url).then(function(content) {
     $scope.articles = content.data;
   });
