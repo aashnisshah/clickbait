@@ -14,6 +14,9 @@ angular.module('myApp.view1', ['ngRoute'])
   var url = 'http://congen.co/clickbait/test.json';
   $http.get(url).then(function(content) {
     $scope.articles = content.data;
+    angular.forEach($scope.articles, function(key, value) {
+      key.id = value;
+    });
   });
 
   var ref = new Firebase("https://boiling-fire-8955.firebaseio.com");
